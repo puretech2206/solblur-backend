@@ -6,7 +6,7 @@ export const cronRouter = Router();
 let lastRunTime = 0;
 const RUN_INTERVAL = 300000; // 5 dakika
 
-cronRouter.get('/', async (req, res) => {
+cronRouter.get('/', async (_, res) => {
   try {
     const now = Date.now();
     if (now - lastRunTime < RUN_INTERVAL) {
